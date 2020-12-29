@@ -3,13 +3,13 @@ title: Test
 sidebarDepth: 0
 ---
 
-# Testing
+## Testing
 To run the test for this package, run:
 ```bash
 docker-compose up
 ```
 
-# Database Testing
+## Database Testing
 To reset the database after each test, add:
 
 ```php
