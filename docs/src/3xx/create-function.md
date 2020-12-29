@@ -15,8 +15,8 @@ Using upsert will update data that exist and if doesnt exist it will create it.
 // Query Builder
 DB::collection('users')
     ->where('name', 'John')
-    ->update($data, ['upsert' => true]);
+    ->update(['age' => 20, 'address' => 'philippines'], ['upsert' => true]);
 
 // Eloquent
-$user->update($data, ['upsert' => true]);
+$user->update(['age' => 20, 'address' => 'philippines'], ['upsert' => true]);
 ```
