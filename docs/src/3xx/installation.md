@@ -2,26 +2,25 @@
 title: Installation
 sidebarDepth: 0
 ---
-
-Make sure you have the MongoDB PHP driver installed.
+**Note:** Make sure you have the MongoDB PHP driver installed.
 You can find installation instructions at [http://php.net/manual/en/mongodb.installation.php](http://php.net/manual/en/mongodb.installation.php)
-
-Install the package via Composer:
+## Install The Package
+Inside your project, Install the package via Composer:
 ```bash
 $ composer require jenssegers/mongodb
 ```
 
-## Laravel
+## Set Laravel Project
 In case your Laravel version does NOT autoload the packages, add the service provider to `config/app.php`:
 ```php
 Jenssegers\Mongodb\MongodbServiceProvider::class,
 ```
 
-## Lumen
-For usage with Lumen, add the service provider in `bootstrap/app.php`. In this file, you will also need to enable Eloquent. You must however ensure that your call to `$app->withEloquent();` is below where you have registered the `MongodbServiceProvider`:
+## Set Lumen Project
+For usage with Lumen, add the service provider in `bootstrap/app.php`. In this file, you will also need to enable Eloquent. You must however ensure that your call to `$app->withEloquent();` is below where you have registered the `MongodbServiceProvider` or you can add this just above the `return $app;`:
 ```php
 $app->register(Jenssegers\Mongodb\MongodbServiceProvider::class);
-
+$app->withFacades(); // this optional
 $app->withEloquent();
 ```
 
@@ -29,7 +28,7 @@ The service provider will register a MongoDB database extension with the origina
 
 When using MongoDB connections, Laravel will automatically provide you with the corresponding MongoDB objects.
 
-## Non-Laravel projects
+## Set Non-Laravel projects
 For usage outside Laravel, check out the Capsule manager and add:
 ```php
 $capsule->getDatabaseManager()->extend('mongodb', function($config, $name) {

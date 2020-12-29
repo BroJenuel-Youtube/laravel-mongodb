@@ -22,10 +22,22 @@ ul > li > section > span
     font-weight: 700;
 }
 
-// .sidebar-group.is-sub-group > .sidebar-heading.open {
-//     color: $accentColor!important;
-// }
-
 .sidebar-group.is-sub-group > .sidebar-group-items > li > .sidebar-link.active, li > .sidebar-link.active {
   text-decoration: underline;  
+}
+.theme-succinct-content p code {
+  color: $accentColor!important;
+  background-color: rgba(130, 224, 170,0.08)!important;
+}
+
+.page-edit .edit-link {
+  padding: 7px 20px;
+  border: 1px solid var(--textMutedColor);
+  border-radius: 15px;
+  background-color: rgba(130, 224, 170,0.00);
+  transition: 0.3s;
+}
+
+.page-edit .edit-link:hover {
+  background-color: rgba(130, 224, 170,0.3);
 }

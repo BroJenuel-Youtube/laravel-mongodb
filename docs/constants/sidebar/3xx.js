@@ -6,8 +6,8 @@ module.exports = {
       collapsable: true,
       children: [
         'installation',
-        'test',
-        'configuration'
+        'configuration',
+        'test'
       ]
     },
     {
