@@ -35,9 +35,9 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
+    repo: 'https://github.com/BroJenuel-Youtube/laravel-mongodb',
+    editLinks: true,
+    docsDir: 'docs/src/',
     editLinkText: '',
     lastUpdated: false,
     nav: NAV,
