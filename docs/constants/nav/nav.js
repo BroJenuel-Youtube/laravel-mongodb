@@ -14,10 +14,6 @@ module.exports = {
             }
           ]
           
-        },
-        {
-          text: 'Github',
-          link: 'https://v1.vuepress.vuejs.org'
         }
       ]
 }
