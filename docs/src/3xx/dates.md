@@ -10,8 +10,10 @@ use \MongoDB\BSON\UTCDateTime as DateTime;
 ## Get specific date
 Getting the specific dates.
 ```php
-$start = new DateTime(Carbon::parse($request->input('date'))->subDays(1));
-$to = new DateTime(Carbon::parse($request->input('date'))->addDays(1));
+$date = '2020-12-21';
+
+$start = new DateTime(Carbon::parse($date)->subDays(1));
+$to = new DateTime(Carbon::parse($date)->addDays(1));
 
 $data = Test::where('date','>=', $start)
     ->where('date','<=',$to)
