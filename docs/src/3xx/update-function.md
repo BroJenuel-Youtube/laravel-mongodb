@@ -1,6 +1,6 @@
 ---
-title: UPDATING
-sidebarDepth: 0
+title: UPDATE
+sidebarDepth: 1
 ---
 
 ## Using Upsert
@@ -23,4 +23,24 @@ Cat::where('age', 3)
 
 Car::where('weight', 300)
     ->decrement('weight', 100, ['latest_change' => 'carbon fiber']);
+```
+
+## Projections
+You can apply projections to your queries using the project method.
+```php
+DB::collection('items')
+    ->project(['tags' => ['$slice' => 1]])
+    ->get();
+
+DB::collection('items')
+    ->project(['tags' => ['$slice' => [3, 7]]])
+    ->get();
+```
+Projections with Pagination
+```php
+$limit = 25;
+$projections = ['id', 'name'];
+
+DB::collection('items')
+    ->paginate($limit, $projections);
 ```

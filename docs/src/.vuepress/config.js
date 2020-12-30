@@ -39,7 +39,7 @@ module.exports = {
     editLinks: true,
     docsDir: 'docs/src/',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
     nav: NAV,
     sidebar: {
       '/3xx/': three,

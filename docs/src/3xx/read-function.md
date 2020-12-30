@@ -5,19 +5,19 @@ sidebarDepth: 3
 
 This are some basic way to retrieve or read data.
 
-## Retrieving all models
-This will retrieve all data, `Note: If you have a lot thousands of data, this is not recommended way`
+## all - Retrieving all data
+This will retrieve all data, `Note: If you have a thousands of data, this is not recommended way`
 ```php
 $users = User::all();
 ```
 
-## Retrieving a record by primary key
+## find - Retrieve record by primary key
 This will retrieve specific data by finding specific id.
 ```php
 $user = User::find('517c43667db388101e00000f');
 ```
 
-## Where
+## where
 We can also get data that we want using where.
 ```php
 $posts =
@@ -31,7 +31,7 @@ $user = User::find('517c43667db388101e00000f')
 $user->books()->where('title','The Lion and the Tiger')->take(10)->get();
 ```
 
-## OR Statements
+## orWhere - OR Statements
 We can also use OR to get data if one or more condition is met.
 ```php
 $posts =
@@ -40,7 +40,7 @@ $posts =
         ->get();
 ```
 
-## AND statements
+## where - AND statements
 Using statement is by using where function, this will get data if all condition is met.
 ```php
 $users =
@@ -69,7 +69,7 @@ Fetch data where in the collumn is not null.
 $users = User::whereNull('age')->get();
 ```
 
-## Advanced wheres
+## advance wheres - using a function
 We can also add function inside where or orWhere function to be able to create methods inside it.
 ```php
 $users =
@@ -88,8 +88,8 @@ OrderBy is used to order the data being fethced.
 $users = User::orderBy('age', 'desc')->get();
 ```
 
-## Offset & Limit (skip & take)
-
+## skip & take - Offset & Limit
+Use this to limit the data you are retrieving.
 ```php
 $users =
     User::skip(10)

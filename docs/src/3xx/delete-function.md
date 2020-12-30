@@ -1,6 +1,6 @@
 ---
 title: DELETE
-sidebarDepth: 0
+sidebarDepth: 1
 ---
 # Deleting Data
 ## Destroy / Delete
@@ -8,13 +8,16 @@ Remove specific data.
 ```php
 $user = User::find('asd834720394djfdf')->delete();
 
+// other sample
+$test = Test::find($request->input('id'));
+if ($test->delete()) return true;
+
 // Similar operation for embeds
 $user->books()->destroy($book);
 ```
 
 ## Pull
-
-Remove an item from an array.
+Remove an item from an array typed fields.
 ```php
 DB::collection('users')
     ->where('name', 'John')
@@ -43,5 +46,6 @@ DB::collection('users')
     ->where('name', 'John')
     ->unset('note');
 
+// similar to this
 $user->unset('note');
 ```
