@@ -62,9 +62,14 @@ We can also use inbetween `(mostly numbers and dates)`. To fetch data that exist
 ```php
 $posts = Post::whereBetween('votes', [1, 100])->get();
 ```
+## whereNotNull
+Fetch data where in the collumn is not null
+```php
+    $users = User::whereNotNull('age')->get();
+```
 
 ## whereNull
-Fetch data where in the collumn is not null.
+Fetch data where in the collumn is null.
 ```php
 $users = User::whereNull('age')->get();
 ```
