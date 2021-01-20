@@ -37,6 +37,7 @@ module.exports = {
       title: 'Association',
       collapsable: true,
       children: [
+        'relationbasicusage',
         'hasMany',
         'embeds-one',
         'embeds-many'
