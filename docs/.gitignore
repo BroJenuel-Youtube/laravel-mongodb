@@ -3,6 +3,7 @@ logs
 node_modules
 npm-debug.log
 coverage/
+/**/*.psd
 run
 .DS_Store
 .nyc_output
