@@ -5,7 +5,7 @@ sidebarDepth: 0
 ### Basic Usage
 You can find on how to use relationship in the eloquent document:
 https://laravel.com/docs/8.x/eloquent-relationships  
-***In Laravel mongodb the only available relationships are:
+***In Laravel mongodb the only available relationships are:***
  - hasOne
  - hasMany
  - belongsTo
