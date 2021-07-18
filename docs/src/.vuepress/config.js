@@ -53,7 +53,9 @@ module.exports = {
     sidebar: {
       '/3xx/': three,
       '/2xx/': versionTwo
-    }
+    },
+    displayAllHeaders: true,
+    activeHeaderLinks: true,
   },
 
   /**
