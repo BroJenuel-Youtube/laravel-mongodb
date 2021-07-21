@@ -4,6 +4,12 @@ sidebarDepth: 2
 ---
 ## Installation
 
+Install the package via Composer:
+
+```bash
+$ composer require jenssegers/mongodb
+```
+
 ### Laravel
 
 In case your Laravel version does NOT autoload the packages, add the service provider to `config/app.php`:
